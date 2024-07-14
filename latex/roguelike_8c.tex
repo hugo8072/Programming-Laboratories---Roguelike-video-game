@@ -1,0 +1,631 @@
+\hypertarget{roguelike_8c}{\section{roguelike.\+c File Reference}
+\label{roguelike_8c}\index{roguelike.\+c@{roguelike.\+c}}
+}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}cgi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}estado.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}movimentos\+\_\+inimigo.\+c\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}score.\+c\char`\"{}}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+Include dependency graph for roguelike.\+c\+:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{roguelike_8c_ad7cb0b0f5dcdf10bdd1852c18c7353c2}{int {\bfseries proximo} (int x1, int y1, int x2, int y2)}\label{roguelike_8c_ad7cb0b0f5dcdf10bdd1852c18c7353c2}
+
+\item 
+\hypertarget{roguelike_8c_a245ed01f2cc115f31682fcf4fee0ed71}{int {\bfseries proximo2} (int x1, int y1, int x2, int y2)}\label{roguelike_8c_a245ed01f2cc115f31682fcf4fee0ed71}
+
+\item 
+\hypertarget{roguelike_8c_a169f209e082684f56134229b8376ac2b}{int {\bfseries invariante2} (int x, int y, \hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)}\label{roguelike_8c_a169f209e082684f56134229b8376ac2b}
+
+\item 
+int \hyperlink{roguelike_8c_a2f4ad66a2265126fa934a97d957abc36}{tem\+\_\+obstaculo} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+int \hyperlink{roguelike_8c_a9cd698619e4c82f95feb1c28eb6db853}{tem\+\_\+inimigo} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+void \hyperlink{roguelike_8c_a54c65053d127f41c09c40d2694dca95f}{imprime\+\_\+casa} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_af332af5fddcb3b507553ac15cd09329a}{inicializar} ()
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a06490943d4a3eb06cc3c773ae0d8688c}{nivel1} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_afa8b63b93d5914dcff2ae3e3244542ea}{novo\+\_\+nivel2e3} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a2f33c93c16bacea09b028d13538a242d}{novo\+\_\+nivel4} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_acb94a2fb325f59bb041a2970e9659343}{novo\+\_\+nivel5} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_af72f00ee24f2b0b2528c0e3cd145d39c}{imprime\+\_\+saida} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a6d9c16d5da105abed32fb071568ace58}{imprime\+\_\+movimento} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int dx, int dy)
+\item 
+void \hyperlink{roguelike_8c_a5d67391dc0c169abb4557a59732d9654}{imprime\+\_\+inimigos} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+int \hyperlink{roguelike_8c_af4d95725a8ad25d7691914121bc75b36}{matou\+\_\+inimigo} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a9e8e86e667e0a8f0a9d26eba29683341}{mata\+\_\+inimigos} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int i)
+\item 
+void \hyperlink{roguelike_8c_aadb732b661be2b4b97efdd7c08a31876}{linka\+\_\+inimigo} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_aae91f37d40e555c960eaf774192cc622}{imprime\+\_\+knifes} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a8d9789fcc65b2e8318a9b631ce3ed026}{aumenta\+\_\+naifas} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a2c2ba195b30a53fbf3e561b224d21b30}{aumenta\+\_\+coracoes} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_aa55a5b0db3d001cc35e0c7c2b266d469}{imprime\+\_\+bonus} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a8697f98b6db66937696ce37d57df205a}{setas\+Random} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a70116f45ec90f2230faef6cd9bd042d2}{muda\+Estado2} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a2c9d5d7a5e81db1c80c91c7080d67013}{imprime\+\_\+muda\+Estado} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_ac8c33ea89cf356ecdda3d457d13ca3c2}{imprime\+\_\+setas\+Random} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a6721adff46cade7c4b415a03860972b9}{imprime\+\_\+movimentos} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_aa64ff848d1ed3445837674da64d37a2f}{imprime\+\_\+jogador} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a1c6597d322457d172fa1582fdf241ec7}{imprime\+\_\+lanca} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_ae45366671c95cdbd6739108ce5b237c5}{imprime\+\_\+saltos} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a2315a4d27cb11c8d41fed8cf93f6bdad}{imprime\+\_\+mar} ()
+\item 
+void \hyperlink{roguelike_8c_a278c1f3fdad2580754c917a98096ad97}{imprime\+\_\+obstaculos} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+void \hyperlink{roguelike_8c_a2feb6aab3d855a19f14509252c530e14}{imprime\+\_\+arma} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a6cbcf5d99d4ffd0d616be2eb0b2ce9f9}{imprime\+\_\+vida} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_adb226ee5f1c105e8f7558507a551267e}{escrever\+\_\+ficheiro} (char $\ast$user, \hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+int \hyperlink{roguelike_8c_ac0a0a35755b5c6fb9a38c27bcd048b21}{ler\+\_\+ficheiro} (char $\ast$user, \hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} $\ast$e)
+\item 
+void \hyperlink{roguelike_8c_a38bedb52cd24705e7f283271d3d0e07f}{imprime\+\_\+backgraound} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+void \hyperlink{roguelike_8c_a727cd5b923e9c980c02ec7afe5b27d10}{verifica\+\_\+melhorscore} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+int \hyperlink{roguelike_8c_ae3751ab595350ec754e61e01f003a9ec}{movimento\+\_\+permitido} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+void \hyperlink{roguelike_8c_aea1b9c347a0559dee6efeba9a1251769}{imprime\+\_\+menus} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a9d9065384eeec8657a045ee9f20ca112}{game\+\_\+over} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a14e8bbd27aad9790ce17a0e919c0c6f7}{reset} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_ab4fe0327ea9856b354d07d1c89ef7bc5}{imprime\+\_\+tocha} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a17f97bafc107d92316a107482aa7f990}{line\+\_\+sight} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int px, int py)
+\item 
+void \hyperlink{roguelike_8c_aed23c4465619f5993a6904e78d9877f3}{imprime\+\_\+bloqueio} (int x, int y)
+\item 
+void \hyperlink{roguelike_8c_a230b857e6d4f0e2472fc8139c0be7d9f}{ilumina} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+void \hyperlink{roguelike_8c_aab8d3bfe8182b14ce05cb55994803640}{terramoto} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+void \hyperlink{roguelike_8c_a49098bd5a88de3595007dedc75c8087d}{imprime\+\_\+montanha} ()
+\item 
+void \hyperlink{roguelike_8c_a0c5fc656323ea3a8070bb87daa99a611}{imprime\+\_\+inicio} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{roguelike_8c_a3c16cc999b44ab99a1e3aa80d2365ab9}{testa\+\_\+lanca} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+int \hyperlink{roguelike_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{roguelike_8c_a2c2ba195b30a53fbf3e561b224d21b30}{\index{roguelike.\+c@{roguelike.\+c}!aumenta\+\_\+coracoes@{aumenta\+\_\+coracoes}}
+\index{aumenta\+\_\+coracoes@{aumenta\+\_\+coracoes}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{aumenta\+\_\+coracoes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} aumenta\+\_\+coracoes (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a2c2ba195b30a53fbf3e561b224d21b30}
+Colecta Vidas do tabuleiro editando o S\+T\+A\+T\+U\+S \hypertarget{roguelike_8c_a8d9789fcc65b2e8318a9b631ce3ed026}{\index{roguelike.\+c@{roguelike.\+c}!aumenta\+\_\+naifas@{aumenta\+\_\+naifas}}
+\index{aumenta\+\_\+naifas@{aumenta\+\_\+naifas}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{aumenta\+\_\+naifas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} aumenta\+\_\+naifas (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a8d9789fcc65b2e8318a9b631ce3ed026}
+Colecta espadas do tabuleiro editando o S\+T\+A\+T\+U\+S \hypertarget{roguelike_8c_adb226ee5f1c105e8f7558507a551267e}{\index{roguelike.\+c@{roguelike.\+c}!escrever\+\_\+ficheiro@{escrever\+\_\+ficheiro}}
+\index{escrever\+\_\+ficheiro@{escrever\+\_\+ficheiro}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{escrever\+\_\+ficheiro}]{\setlength{\rightskip}{0pt plus 5cm}void escrever\+\_\+ficheiro (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{user, }
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_adb226ee5f1c105e8f7558507a551267e}
+Grava o estado num ficheiro
+
+cria um ficheiro
+
+cria um ficheiro nesta localizaçao
+
+converte o estado em string e grava-\/o no ficheiro \hypertarget{roguelike_8c_a9d9065384eeec8657a045ee9f20ca112}{\index{roguelike.\+c@{roguelike.\+c}!game\+\_\+over@{game\+\_\+over}}
+\index{game\+\_\+over@{game\+\_\+over}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{game\+\_\+over}]{\setlength{\rightskip}{0pt plus 5cm}void game\+\_\+over (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a9d9065384eeec8657a045ee9f20ca112}
+Cria os botões T\+R\+Y Again que reinicia o jogo e Highscore para visualizar os melhores scores \hypertarget{roguelike_8c_a230b857e6d4f0e2472fc8139c0be7d9f}{\index{roguelike.\+c@{roguelike.\+c}!ilumina@{ilumina}}
+\index{ilumina@{ilumina}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{ilumina}]{\setlength{\rightskip}{0pt plus 5cm}void ilumina (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a230b857e6d4f0e2472fc8139c0be7d9f}
+Mostra posições para as quais os inimigos podem atacar
+
+ilumina as casas na vertical do ceifeito
+
+ilumina as casas na horizontal do escudeiro
+
+ilumina as casas na diagonal do wizard
+
+ilumina todas as casas à volta do dragão \hypertarget{roguelike_8c_a2feb6aab3d855a19f14509252c530e14}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+arma@{imprime\+\_\+arma}}
+\index{imprime\+\_\+arma@{imprime\+\_\+arma}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+arma}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+arma (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a2feb6aab3d855a19f14509252c530e14}
+Imprime o número espadas disponiveis no menu S\+T\+A\+T\+U\+S \hypertarget{roguelike_8c_a38bedb52cd24705e7f283271d3d0e07f}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+backgraound@{imprime\+\_\+backgraound}}
+\index{imprime\+\_\+backgraound@{imprime\+\_\+backgraound}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+backgraound}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+backgraound (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a38bedb52cd24705e7f283271d3d0e07f}
+imprime imagem de fundo dependendo do nivel \hypertarget{roguelike_8c_aed23c4465619f5993a6904e78d9877f3}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+bloqueio@{imprime\+\_\+bloqueio}}
+\index{imprime\+\_\+bloqueio@{imprime\+\_\+bloqueio}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+bloqueio}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+bloqueio (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_aed23c4465619f5993a6904e78d9877f3}
+Bloqueia todo o jogo até se ativar a tocha \hypertarget{roguelike_8c_aa55a5b0db3d001cc35e0c7c2b266d469}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+bonus@{imprime\+\_\+bonus}}
+\index{imprime\+\_\+bonus@{imprime\+\_\+bonus}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+bonus}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+bonus (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_aa55a5b0db3d001cc35e0c7c2b266d469}
+Imprime vidas no tabuleiro tornando as próximas clicáveis \hypertarget{roguelike_8c_a54c65053d127f41c09c40d2694dca95f}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+casa@{imprime\+\_\+casa}}
+\index{imprime\+\_\+casa@{imprime\+\_\+casa}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+casa}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+casa (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a54c65053d127f41c09c40d2694dca95f}
+imprime tabuleiro
+
+tabuleiro com texturas do nivel 1
+
+tabuleiro com textura dos restantes niveis \hypertarget{roguelike_8c_a0c5fc656323ea3a8070bb87daa99a611}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+inicio@{imprime\+\_\+inicio}}
+\index{imprime\+\_\+inicio@{imprime\+\_\+inicio}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+inicio}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+inicio (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a0c5fc656323ea3a8070bb87daa99a611}
+Imprime chegada à ilha \hypertarget{roguelike_8c_a5d67391dc0c169abb4557a59732d9654}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+inimigos@{imprime\+\_\+inimigos}}
+\index{imprime\+\_\+inimigos@{imprime\+\_\+inimigos}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+inimigos}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+inimigos (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a5d67391dc0c169abb4557a59732d9654}
+imprime imagem de todos os inimigos visiveis \hypertarget{roguelike_8c_aa64ff848d1ed3445837674da64d37a2f}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+jogador@{imprime\+\_\+jogador}}
+\index{imprime\+\_\+jogador@{imprime\+\_\+jogador}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+jogador}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+jogador (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_aa64ff848d1ed3445837674da64d37a2f}
+Imprime jogador \hypertarget{roguelike_8c_aae91f37d40e555c960eaf774192cc622}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+knifes@{imprime\+\_\+knifes}}
+\index{imprime\+\_\+knifes@{imprime\+\_\+knifes}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+knifes}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+knifes (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_aae91f37d40e555c960eaf774192cc622}
+Imprime as espadas e torna as que tiverem próximas clicáveis para poderem ser apanhadas \hypertarget{roguelike_8c_a1c6597d322457d172fa1582fdf241ec7}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+lanca@{imprime\+\_\+lanca}}
+\index{imprime\+\_\+lanca@{imprime\+\_\+lanca}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+lanca}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+lanca (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a1c6597d322457d172fa1582fdf241ec7}
+Imprime no menu S\+T\+A\+T\+U\+S lanca caso ainda não tenha sido usada \hypertarget{roguelike_8c_a2315a4d27cb11c8d41fed8cf93f6bdad}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+mar@{imprime\+\_\+mar}}
+\index{imprime\+\_\+mar@{imprime\+\_\+mar}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+mar}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+mar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a2315a4d27cb11c8d41fed8cf93f6bdad}
+Imprime mar no nivel 1 \hypertarget{roguelike_8c_aea1b9c347a0559dee6efeba9a1251769}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+menus@{imprime\+\_\+menus}}
+\index{imprime\+\_\+menus@{imprime\+\_\+menus}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+menus}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+menus (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_aea1b9c347a0559dee6efeba9a1251769}
+Imprime menus exteriores ao tabuleiro
+
+Menus nivel 1
+
+Menus para os restantes niveis \hypertarget{roguelike_8c_a49098bd5a88de3595007dedc75c8087d}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+montanha@{imprime\+\_\+montanha}}
+\index{imprime\+\_\+montanha@{imprime\+\_\+montanha}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+montanha}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+montanha (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a49098bd5a88de3595007dedc75c8087d}
+Imprime montanha no nivel 1 \hypertarget{roguelike_8c_a6d9c16d5da105abed32fb071568ace58}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+movimento@{imprime\+\_\+movimento}}
+\index{imprime\+\_\+movimento@{imprime\+\_\+movimento}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+movimento}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+movimento (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{dx, }
+\item[{int}]{dy}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a6d9c16d5da105abed32fb071568ace58}
+Move o jogador
+
+abre o link para a saida do nivel 1
+
+abre o link para a porta de saida dos restantes niveis \hypertarget{roguelike_8c_a6721adff46cade7c4b415a03860972b9}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+movimentos@{imprime\+\_\+movimentos}}
+\index{imprime\+\_\+movimentos@{imprime\+\_\+movimentos}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+movimentos}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+movimentos (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a6721adff46cade7c4b415a03860972b9}
+Define os movimentos possiveis do jogador
+
+Movimentos caso não tenha em posse a habilidade \char`\"{}salto\char`\"{}
+
+Movimentos caso tenha em posse a habilidade \char`\"{}salto\char`\"{} \hypertarget{roguelike_8c_a2c9d5d7a5e81db1c80c91c7080d67013}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+muda\+Estado@{imprime\+\_\+muda\+Estado}}
+\index{imprime\+\_\+muda\+Estado@{imprime\+\_\+muda\+Estado}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+muda\+Estado}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+muda\+Estado (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a2c9d5d7a5e81db1c80c91c7080d67013}
+Imprime as caixas mágicas no tabuleiro tornando-\/as clicáveis caso estejam próximas \hypertarget{roguelike_8c_a278c1f3fdad2580754c917a98096ad97}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+obstaculos@{imprime\+\_\+obstaculos}}
+\index{imprime\+\_\+obstaculos@{imprime\+\_\+obstaculos}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+obstaculos}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+obstaculos (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a278c1f3fdad2580754c917a98096ad97}
+Imprime os diferentes obstaculos pelos diferentes niveis caso estejam visiveis \hypertarget{roguelike_8c_af72f00ee24f2b0b2528c0e3cd145d39c}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+saida@{imprime\+\_\+saida}}
+\index{imprime\+\_\+saida@{imprime\+\_\+saida}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+saida}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+saida (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_af72f00ee24f2b0b2528c0e3cd145d39c}
+Imprime imagem da porta de mudança de nivel \hypertarget{roguelike_8c_ae45366671c95cdbd6739108ce5b237c5}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+saltos@{imprime\+\_\+saltos}}
+\index{imprime\+\_\+saltos@{imprime\+\_\+saltos}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+saltos}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+saltos (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_ae45366671c95cdbd6739108ce5b237c5}
+Imprime no menu S\+T\+A\+T\+U\+S salto caso ainda não tenha sido usado \hypertarget{roguelike_8c_ac8c33ea89cf356ecdda3d457d13ca3c2}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+setas\+Random@{imprime\+\_\+setas\+Random}}
+\index{imprime\+\_\+setas\+Random@{imprime\+\_\+setas\+Random}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+setas\+Random}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+setas\+Random (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_ac8c33ea89cf356ecdda3d457d13ca3c2}
+Imprime as setas especiais no tabuleiro tornando-\/as clicáveis caso estejam próximas \hypertarget{roguelike_8c_ab4fe0327ea9856b354d07d1c89ef7bc5}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+tocha@{imprime\+\_\+tocha}}
+\index{imprime\+\_\+tocha@{imprime\+\_\+tocha}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+tocha}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+tocha (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_ab4fe0327ea9856b354d07d1c89ef7bc5}
+Imprime tocha para, no nivel 3, voltar a ter visão \hypertarget{roguelike_8c_a6cbcf5d99d4ffd0d616be2eb0b2ce9f9}{\index{roguelike.\+c@{roguelike.\+c}!imprime\+\_\+vida@{imprime\+\_\+vida}}
+\index{imprime\+\_\+vida@{imprime\+\_\+vida}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{imprime\+\_\+vida}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+vida (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a6cbcf5d99d4ffd0d616be2eb0b2ce9f9}
+Imprime o número de vidas disponiveis no menu S\+T\+A\+T\+U\+S \hypertarget{roguelike_8c_af332af5fddcb3b507553ac15cd09329a}{\index{roguelike.\+c@{roguelike.\+c}!inicializar@{inicializar}}
+\index{inicializar@{inicializar}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{inicializar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} inicializar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_af332af5fddcb3b507553ac15cd09329a}
+inicializa as variaveis da estrutura estado no incio do jogo \hypertarget{roguelike_8c_ac0a0a35755b5c6fb9a38c27bcd048b21}{\index{roguelike.\+c@{roguelike.\+c}!ler\+\_\+ficheiro@{ler\+\_\+ficheiro}}
+\index{ler\+\_\+ficheiro@{ler\+\_\+ficheiro}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{ler\+\_\+ficheiro}]{\setlength{\rightskip}{0pt plus 5cm}int ler\+\_\+ficheiro (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{user, }
+\item[{{\bf E\+S\+T\+A\+D\+O} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_ac0a0a35755b5c6fb9a38c27bcd048b21}
+Lê e atualiza o ficheiro que tem a estrutura E\+S\+T\+A\+D\+O guardada
+
+lê um ficheiro nesta localizaçao
+
+caso consiga ler o ficheiro converte a string do ficheiro para a estrutura E\+S\+T\+A\+D\+O \hypertarget{roguelike_8c_a17f97bafc107d92316a107482aa7f990}{\index{roguelike.\+c@{roguelike.\+c}!line\+\_\+sight@{line\+\_\+sight}}
+\index{line\+\_\+sight@{line\+\_\+sight}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{line\+\_\+sight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} line\+\_\+sight (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{px, }
+\item[{int}]{py}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a17f97bafc107d92316a107482aa7f990}
+Imprime campo de visão do jogador
+
+para um angulo de 0 a 360
+
+para um raio de 0 a 3
+
+caso não tenha objecto guarda essa posição como sendo visivel \hypertarget{roguelike_8c_aadb732b661be2b4b97efdd7c08a31876}{\index{roguelike.\+c@{roguelike.\+c}!linka\+\_\+inimigo@{linka\+\_\+inimigo}}
+\index{linka\+\_\+inimigo@{linka\+\_\+inimigo}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{linka\+\_\+inimigo}]{\setlength{\rightskip}{0pt plus 5cm}void linka\+\_\+inimigo (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_aadb732b661be2b4b97efdd7c08a31876}
+torna os inimigos clicáveis e indica quais deles podemos atacar \hypertarget{roguelike_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{roguelike.\+c@{roguelike.\+c}!main@{main}}
+\index{main@{main}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+reserva o valor de x
+
+reserva o valor de y
+
+abre exceção para ser possivel alterar as coordenadas sem as funções \char`\"{}moviment\+\_\+permitido\char`\"{} e \char`\"{}posição\+\_\+valida2\char`\"{}
+
+coloca a posição do jogador na posição inicial do jogo
+
+muda as coordenadas do jogador para x e y
+
+Caso cliquemos na posição que esteja próximo de um inimgo matamo-\/lo
+
+apartir de nivel 4 os inimigos movem-\/se quando os atacamos
+
+caso o valor da flag seja 0 muda para nivel 1
+
+caso o jogador esteja na posição da porta de saida de nivel e o valor da flag seja 1 e 2 muda para os niveis 2 e 3 respetivamente
+
+caso a x e y tenham o valor 100 e a flag seja 3 avança para o nivel 4
+
+caso o jagador se encontre na porta de saida de nivel e a flag assuma o valor 4, muda para nivel 5 e assim sussecivamente
+
+caso o número de argumentos seja diferente de 3, ou seja, no inicio do jogo, a estrutura E\+S\+T\+A\+D\+O assume o valor de da função inicializar
+
+Atualiza a estrutura E\+S\+T\+A\+D\+O com o novo nome de utilizador
+
+se o jogo estiver a iniciar apeans imprime o gif do inicio e o background
+
+Imprime tabuleiro
+
+caso estejamos no inicio do nivel 4, imprime o bloqueio para obrigar a usar a tocha
+
+caso estejamos no nivel 3 na posição de saída, imprime um terramoto
+
+imprime o mar e a montanha no nivel 1
+
+caso o numero de vidas chegue a 0, acaba o jogo \hypertarget{roguelike_8c_a9e8e86e667e0a8f0a9d26eba29683341}{\index{roguelike.\+c@{roguelike.\+c}!mata\+\_\+inimigos@{mata\+\_\+inimigos}}
+\index{mata\+\_\+inimigos@{mata\+\_\+inimigos}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{mata\+\_\+inimigos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} mata\+\_\+inimigos (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a9e8e86e667e0a8f0a9d26eba29683341}
+Mata um inimigo e aumenta o score consoante o tipo de inimigo \hypertarget{roguelike_8c_af4d95725a8ad25d7691914121bc75b36}{\index{roguelike.\+c@{roguelike.\+c}!matou\+\_\+inimigo@{matou\+\_\+inimigo}}
+\index{matou\+\_\+inimigo@{matou\+\_\+inimigo}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{matou\+\_\+inimigo}]{\setlength{\rightskip}{0pt plus 5cm}int matou\+\_\+inimigo (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_af4d95725a8ad25d7691914121bc75b36}
+verifica se matamos algum inimigo \hypertarget{roguelike_8c_ae3751ab595350ec754e61e01f003a9ec}{\index{roguelike.\+c@{roguelike.\+c}!movimento\+\_\+permitido@{movimento\+\_\+permitido}}
+\index{movimento\+\_\+permitido@{movimento\+\_\+permitido}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{movimento\+\_\+permitido}]{\setlength{\rightskip}{0pt plus 5cm}int movimento\+\_\+permitido (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_ae3751ab595350ec754e61e01f003a9ec}
+Testa se a distância entre 2 casa é menor do que 5 para assim ser um movimento válido \hypertarget{roguelike_8c_a70116f45ec90f2230faef6cd9bd042d2}{\index{roguelike.\+c@{roguelike.\+c}!muda\+Estado2@{muda\+Estado2}}
+\index{muda\+Estado2@{muda\+Estado2}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{muda\+Estado2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} muda\+Estado2 (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a70116f45ec90f2230faef6cd9bd042d2}
+Caixa mágica que reorganiza as posições dos inimigos e dos jogadores podendo diminuir ou aumentar o número de inimigos
+
+Retira todos os inimigos do tabuleiro
+
+Reorganiza as posições dos inimigos aleatóriamente para uma posição livre
+
+Reorganiza a posição do jogador aleatóriamente para uma posição livre
+
+Retira a caixa mágica do tabuleiro \hypertarget{roguelike_8c_a06490943d4a3eb06cc3c773ae0d8688c}{\index{roguelike.\+c@{roguelike.\+c}!nivel1@{nivel1}}
+\index{nivel1@{nivel1}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{nivel1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} nivel1 (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a06490943d4a3eb06cc3c773ae0d8688c}
+inicializa as variaveis da estrutura estado no nivel 1
+
+coloca todos os campos da matriz a 1 (visiveis)
+
+coloca posiçoes aleatórias não repetidas no array dos inimigos
+
+coloca posiçoes aleatórias não repetidas no array dos inimigos, algumas fixas devido ao tabuleiro ser meio costumizado (montanha e mar)
+
+coloca posiçoes aleatórias não repetidas no array das vidas
+
+coloca posiçoes aleatórias não repetidas no array das espadas \hypertarget{roguelike_8c_afa8b63b93d5914dcff2ae3e3244542ea}{\index{roguelike.\+c@{roguelike.\+c}!novo\+\_\+nivel2e3@{novo\+\_\+nivel2e3}}
+\index{novo\+\_\+nivel2e3@{novo\+\_\+nivel2e3}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{novo\+\_\+nivel2e3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} novo\+\_\+nivel2e3 (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_afa8b63b93d5914dcff2ae3e3244542ea}
+inicializa as variaveis da estrutura estado no nivel 2 e do nivel 3
+
+coloca todos os campos da matriz a 1 (visiveis)
+
+coloca posiçoes aleatórias não repetidas no array dos inimigos
+
+coloca posiçoes aleatórias não repetidas no array dos obstáculos
+
+coloca posiçoes aleatórias não repetidas no array das vidas
+
+coloca posiçoes aleatórias não repetidas no array das espadas
+
+coloca posiçoes aleatórias não repetidas no array das setas
+
+coloca posiçoes aleatórias não repetidas no array das caixas mágicas \hypertarget{roguelike_8c_a2f33c93c16bacea09b028d13538a242d}{\index{roguelike.\+c@{roguelike.\+c}!novo\+\_\+nivel4@{novo\+\_\+nivel4}}
+\index{novo\+\_\+nivel4@{novo\+\_\+nivel4}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{novo\+\_\+nivel4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} novo\+\_\+nivel4 (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a2f33c93c16bacea09b028d13538a242d}
+inicializa as variaveis da estrutura estado no nivel 4
+
+coloca todos os campos da matriz a 0 (invisiveis)
+
+coloca posiçoes aleatórias não repetidas no array dos inimigos
+
+coloca posiçoes aleatórias não repetidas no array dos objetos
+
+coloca posiçoes aleatórias não repetidas no array das vidas
+
+coloca posiçoes aleatórias não repetidas no array das espadas
+
+coloca posiçoes aleatórias não repetidas no array das setas
+
+coloca posiçoes aleatórias não repetidas no array das caixas mágicas \hypertarget{roguelike_8c_acb94a2fb325f59bb041a2970e9659343}{\index{roguelike.\+c@{roguelike.\+c}!novo\+\_\+nivel5@{novo\+\_\+nivel5}}
+\index{novo\+\_\+nivel5@{novo\+\_\+nivel5}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{novo\+\_\+nivel5}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} novo\+\_\+nivel5 (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_acb94a2fb325f59bb041a2970e9659343}
+inicializa as variaveis da estrutura estado no nivel 4
+
+coloca todos os campos da matriz a 0 (invisiveis)
+
+coloca os 6 quadrados visiveis (ponto de inicio de nivel)
+
+coloca posiçoes aleatórias não repetidas no array das caixas mágicas
+
+Zona de spawn de Dragões perto da porta de passagem de nivel
+
+coloca posiçoes aleatórias não repetidas no array dos obstáculos
+
+coloca posiçoes aleatórias não repetidas no array das vidas
+
+coloca posiçoes aleatórias não repetidas no array das espadas
+
+coloca posiçoes aleatórias não repetidas no array das setas
+
+coloca posiçoes aleatórias não repetidas no array das caixas mágicas \hypertarget{roguelike_8c_a14e8bbd27aad9790ce17a0e919c0c6f7}{\index{roguelike.\+c@{roguelike.\+c}!reset@{reset}}
+\index{reset@{reset}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void reset (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a14e8bbd27aad9790ce17a0e919c0c6f7}
+Cria botão para reiniciar o jogo em qualquer ponto do mesmo \hypertarget{roguelike_8c_a8697f98b6db66937696ce37d57df205a}{\index{roguelike.\+c@{roguelike.\+c}!setas\+Random@{setas\+Random}}
+\index{setas\+Random@{setas\+Random}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{setas\+Random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} setas\+Random (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a8697f98b6db66937696ce37d57df205a}
+Setas especiais que, quando colectadas no tabuleiro, matam até 2 inimigos aleatórios
+
+calcula número de inimigos no tabuleiro
+
+seleciona inimigos aleatórios
+
+remove inimigo do tabueliro
+
+remove setas do tabulerio \hypertarget{roguelike_8c_a9cd698619e4c82f95feb1c28eb6db853}{\index{roguelike.\+c@{roguelike.\+c}!tem\+\_\+inimigo@{tem\+\_\+inimigo}}
+\index{tem\+\_\+inimigo@{tem\+\_\+inimigo}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{tem\+\_\+inimigo}]{\setlength{\rightskip}{0pt plus 5cm}int tem\+\_\+inimigo (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a9cd698619e4c82f95feb1c28eb6db853}
+Testa se se tem um inimigo na posição (x,y) \hypertarget{roguelike_8c_a2f4ad66a2265126fa934a97d957abc36}{\index{roguelike.\+c@{roguelike.\+c}!tem\+\_\+obstaculo@{tem\+\_\+obstaculo}}
+\index{tem\+\_\+obstaculo@{tem\+\_\+obstaculo}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{tem\+\_\+obstaculo}]{\setlength{\rightskip}{0pt plus 5cm}int tem\+\_\+obstaculo (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a2f4ad66a2265126fa934a97d957abc36}
+Testa se se tem um obstaculo na posição (x,y) \hypertarget{roguelike_8c_aab8d3bfe8182b14ce05cb55994803640}{\index{roguelike.\+c@{roguelike.\+c}!terramoto@{terramoto}}
+\index{terramoto@{terramoto}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{terramoto}]{\setlength{\rightskip}{0pt plus 5cm}void terramoto (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_aab8d3bfe8182b14ce05cb55994803640}
+Imprime terramoto na passagem do nivel 3 para 4 \hypertarget{roguelike_8c_a3c16cc999b44ab99a1e3aa80d2365ab9}{\index{roguelike.\+c@{roguelike.\+c}!testa\+\_\+lanca@{testa\+\_\+lanca}}
+\index{testa\+\_\+lanca@{testa\+\_\+lanca}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{testa\+\_\+lanca}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} testa\+\_\+lanca (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a3c16cc999b44ab99a1e3aa80d2365ab9}
+Testa se gastamos a lança e se gastamos o salto
+
+parte referente ao salto
+
+parte referente à lança
+
+como matar tira uma espada, comensamos 1 espada quando matamos com a lança \hypertarget{roguelike_8c_a727cd5b923e9c980c02ec7afe5b27d10}{\index{roguelike.\+c@{roguelike.\+c}!verifica\+\_\+melhorscore@{verifica\+\_\+melhorscore}}
+\index{verifica\+\_\+melhorscore@{verifica\+\_\+melhorscore}!roguelike.\+c@{roguelike.\+c}}
+\subsubsection[{verifica\+\_\+melhorscore}]{\setlength{\rightskip}{0pt plus 5cm}void verifica\+\_\+melhorscore (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{roguelike_8c_a727cd5b923e9c980c02ec7afe5b27d10}
+Cria um botão que nos redireciona para a lista dos melhores scores 

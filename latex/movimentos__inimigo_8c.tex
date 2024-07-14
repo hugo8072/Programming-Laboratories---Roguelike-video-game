@@ -1,0 +1,199 @@
+\hypertarget{movimentos__inimigo_8c}{\section{movimentos\+\_\+inimigo.\+c File Reference}
+\label{movimentos__inimigo_8c}\index{movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}}
+}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}cgi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}estado.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}estado.\+c\char`\"{}}\\*
+Include dependency graph for movimentos\+\_\+inimigo.\+c\+:
+This graph shows which files directly or indirectly include this file\+:
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{movimentos__inimigo_8c_a5f48dc2f029e22c05489fb20a491db4b}{\#define {\bfseries wizard}~2}\label{movimentos__inimigo_8c_a5f48dc2f029e22c05489fb20a491db4b}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_ab22b843373b9cf2de4dc32dac2d0a61e}{\#define {\bfseries dragon}~2}\label{movimentos__inimigo_8c_ab22b843373b9cf2de4dc32dac2d0a61e}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_a4d4ad44865d4ab59b25db2a4f3a0340a}{\#define {\bfseries escudeiro}~2}\label{movimentos__inimigo_8c_a4d4ad44865d4ab59b25db2a4f3a0340a}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_ae2306663c5c30233735486d4b3b1d262}{\#define {\bfseries ceifeiro}~2}\label{movimentos__inimigo_8c_ae2306663c5c30233735486d4b3b1d262}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_a1d5dab30b404fab91608086105afc78c}{\#define {\bfseries M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R}~10240}\label{movimentos__inimigo_8c_a1d5dab30b404fab91608086105afc78c}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_ae0b4816fb45161ef9da5e6d6134ee28a}{\#define {\bfseries T\+A\+M}~10}\label{movimentos__inimigo_8c_ae0b4816fb45161ef9da5e6d6134ee28a}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_a7e7f9ccd7feb0127c199885b51bb8772}{\#define {\bfseries E\+S\+C\+A\+L\+A}~50}\label{movimentos__inimigo_8c_a7e7f9ccd7feb0127c199885b51bb8772}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_adaa8f468273fdeead1b824f65f0063ce}{\#define {\bfseries O\+B\+S\+T\+A\+C\+U\+L\+O\+S}~30}\label{movimentos__inimigo_8c_adaa8f468273fdeead1b824f65f0063ce}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_adc67e891f23088dd75a5855b28a28788}{\#define {\bfseries I\+N\+I\+M\+I\+G\+O\+S\+N\+I\+V\+E\+L1}~ceifeiro}\label{movimentos__inimigo_8c_adc67e891f23088dd75a5855b28a28788}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_a7e7088169f4cb2d4d26f3a99c59abae8}{\#define {\bfseries O\+B\+S\+T\+A\+C\+U\+L\+O\+S\+N\+I\+V\+E\+L1}~20}\label{movimentos__inimigo_8c_a7e7088169f4cb2d4d26f3a99c59abae8}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_af1bf29d4c352a9d68c60f439017eff08}{\#define {\bfseries I\+N\+I\+M\+I\+G\+O\+S\+N\+I\+V\+E\+L2e3}~ceifeiro + escudeiro}\label{movimentos__inimigo_8c_af1bf29d4c352a9d68c60f439017eff08}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_ab05b6084c5936c89e13f4ae9bd5fd009}{\#define {\bfseries I\+N\+I\+M\+I\+G\+O\+S\+N\+I\+V\+E\+L4}~ceifeiro + escudeiro + 1}\label{movimentos__inimigo_8c_ab05b6084c5936c89e13f4ae9bd5fd009}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_aeccd2c80fbc23f6b0cadc88e617aa02c}{\#define {\bfseries I\+N\+I\+M\+I\+G\+O\+S\+N\+I\+V\+E\+L5}~wizard + ceifeiro + escudeiro}\label{movimentos__inimigo_8c_aeccd2c80fbc23f6b0cadc88e617aa02c}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_aba2a77a2df6074e02da9332cb44545fe}{\#define {\bfseries Liminfx}~13}\label{movimentos__inimigo_8c_aba2a77a2df6074e02da9332cb44545fe}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_a2703200de3996567316161f506d16ec0}{\#define {\bfseries Limsupx}~23}\label{movimentos__inimigo_8c_a2703200de3996567316161f506d16ec0}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_a2e472a4e9051bb1fdab034701237541d}{\#define {\bfseries Liminfy}~3}\label{movimentos__inimigo_8c_a2e472a4e9051bb1fdab034701237541d}
+
+\item 
+\hypertarget{movimentos__inimigo_8c_a8a1d284900e436b02e9a4ace037fee7d}{\#define {\bfseries Limsupy}~13}\label{movimentos__inimigo_8c_a8a1d284900e436b02e9a4ace037fee7d}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{movimentos__inimigo_8c_a2bb3db0ca36f80a75f0d884f27dfe3c3}{invariante} (int x, int y, \hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\item 
+int \hyperlink{movimentos__inimigo_8c_aecfeebf2d85baa822120aa7cc9587d8d}{posicao\+\_\+valida} (int x, int y)
+\item 
+int \hyperlink{movimentos__inimigo_8c_a509bbeb98cfc1e427e5c0c60d209f379}{posicao\+\_\+valida2} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e, int x, int y)
+\item 
+void \hyperlink{movimentos__inimigo_8c_a322b0a619f538e2dbc019dcb21438cf2}{imprime\+\_\+jogavel} (int x, int y)
+\item 
+int \hyperlink{movimentos__inimigo_8c_a70eee300f70cb602caaa867675c521e1}{Rand\+Range} (int Min, int Max)
+\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} \hyperlink{movimentos__inimigo_8c_a087371543c2a41db010bb488d0bf7ec1}{movimentos\+\_\+inimigo} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{movimentos__inimigo_8c_a322b0a619f538e2dbc019dcb21438cf2}{\index{movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}!imprime\+\_\+jogavel@{imprime\+\_\+jogavel}}
+\index{imprime\+\_\+jogavel@{imprime\+\_\+jogavel}!movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}}
+\subsubsection[{imprime\+\_\+jogavel}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\+\_\+jogavel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{movimentos__inimigo_8c_a322b0a619f538e2dbc019dcb21438cf2}
+Mostra ao jogador os seus movimentos possiveis \hypertarget{movimentos__inimigo_8c_a2bb3db0ca36f80a75f0d884f27dfe3c3}{\index{movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}!invariante@{invariante}}
+\index{invariante@{invariante}!movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}}
+\subsubsection[{invariante}]{\setlength{\rightskip}{0pt plus 5cm}int invariante (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{movimentos__inimigo_8c_a2bb3db0ca36f80a75f0d884f27dfe3c3}
+Função que indica se a posição do tabuleiro já esta ocupada, retornando 1 caso esteja ocupada e 0 se estiver livre refere-\/se unicamente ao primeiro nivel do jogo
+
+Devolve 1 caso esteja a ocupar a posição da porta
+
+Devolve 1 caso esteja a ocupar a posição do jogador
+
+Devolve 1 caso esteja ocupado por inimigos
+
+Devolve 1 caso esteja ocupado por obstaculos
+
+Posições ocupadas pela paisagem(mar e montanha)
+
+Devolve 1 caso esteja a ocupar a posição da porta
+
+Devolve 1 caso esteja a ocupar a posição do jogador
+
+Devolve 1 caso esteja ocupado por inimigos
+
+Devolve 1 caso esteja ocupado por obstaculos \hypertarget{movimentos__inimigo_8c_a087371543c2a41db010bb488d0bf7ec1}{\index{movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}!movimentos\+\_\+inimigo@{movimentos\+\_\+inimigo}}
+\index{movimentos\+\_\+inimigo@{movimentos\+\_\+inimigo}!movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}}
+\subsubsection[{movimentos\+\_\+inimigo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+D\+O} movimentos\+\_\+inimigo (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{movimentos__inimigo_8c_a087371543c2a41db010bb488d0bf7ec1}
+utilizado posteriormente para impedir os dragões de se moverem até que o jogador atinja determinada coordenada
+
+caso o jogador esteja na dioganal inferior direita do inimigo
+
+Se a posição na diagonal inferior direita estiver livre e for uma posição dentro do tabuleiro, o inimigo vai se mexer para lá, senão for possivel vai tentar as proximas posiçoes de forma a proximar do jogador,mexendo prioritariamente para baixo,direita, diagonal inferior esquerda, esquerda,diagonal superior esquerda, cima,diagonal superior direita
+
+Se a posição na diagonal superior direita estiver livre e for uma posição dentro do tabuleiro, o inimigo vai se mexer para lá, senão for possivel vai tentar as proximas posiçoes de forma a proximar do jogador, mexendo prioritariamente para cima,direita, diagonal superior esquerda,diagonal inferior direita,abaixo, diagonal inferior esquerda,esquerda
+
+caso o jogador esteja na dioganal superior esquerda do inimigo
+
+Se a posição na diagonal superior esquerda estiver livre e for uma posição dentro do tabuleiro, o inimigo vai se mexer para lá, senão for possivel vai tentar as proximas posiçoes de forma a proximar do jogador,mexendo prioritariamente para cima,esquerda, diagonal inferior esquerda,diagonal superior direita,direita, baixo,diagonal inferior direita
+
+caso o jogador esteja na dioganal inferior esquerda do inimigo
+
+Se a posição na diagonal inferior esquerda estiver livre e for uma posição dentro do tabuleiro, o inimigo vai se mexer para lá, senão for possivel vai tentar as proximas posiçoes de forma a proximar do jogador,mexendo prioritariamente para baixo,esquerda, diagonal superior esquerda,diagonal inferior direita,cima, direita,diagonal superior direita
+
+caso o jogador esteja acima do inimigo
+
+Se a posição superior ao inimigo estiver livre e for uma posição dentro do tabuleiro, o inimigo vai se mexer para lá, senão for possivel vai tentar as proximas posiçoes de forma a proximar do jogador,mexendo prioritariamente a diagonal superior esquerda,diagonal superior direita, direita,esquerda,diagonal inferior direita, diagonal inferior esquerda,baixo
+
+caso o jogador esteja abaixo do inimigo
+
+Se a posição inferior ao inimigo estiver livre e for uma posição dentro do tabuleiro, o inimigo vai se mexer para lá, senão for possivel vai tentar as proximas posiçoes de forma a proximar do jogador,mexendo prioritariamente a diagonal inferior direita,diagonal inferior esquerda, direita,esquerda,diagonal superior direita, diagonal superior esquerda,cima
+
+caso o jogador esteja à direita do inimigo
+
+Se a posição à direita do inimigo estiver livre e for uma posição dentro do tabuleiro, o inimigo vai se mexer para lá, senão for possivel vai tentar as proximas posiçoes de forma a proximar do jogador,mexendo prioritariamente a diagonal inferior direita,diagonal superior direita,cima,baixo,diagonal superior esquerda, diagonal inferior esquerda,esquerda
+
+caso o jogador esteja à esquerda do inimigo
+
+Se a posição à esquerda do inimigo estiver livre e for uma posição dentro do tabuleiro, o inimigo vai se mexer para lá, senão for possivel vai tentar as proximas posiçoes de forma a proximar do jogador,mexendo prioritariamente a diagonal superior esquerda,diagonal inferior esquerda, cima,baixo,diagonal superior direita, diagonal inferior direita,direita
+
+caso o jogador ultrapasse a 3 coluna do tabuleiro, os dragões começam a se mover... \char`\"{}função\char`\"{} que anula os movimentos dos dragões até que o jogador chegue à 3ª coluna
+
+Ciclo que determina como o ceifeiro ataca, e retira uma vida.
+
+Ceifeiro ataca para cima e para baixo
+
+Ciclo que determina como o escudeiro ataca, e retira uma vida.
+
+Escudeiro ataca para a esquerda e para a direita
+
+Ciclo que determina como o Wizard ataca, e retira uma vida.
+
+Wizard ataca para as 4 diagonais
+
+Ciclo que determina como o Dragão ataca, e retira uma vida.
+
+Dragão ataca em todas as direções (tal como o jogador) \hypertarget{movimentos__inimigo_8c_aecfeebf2d85baa822120aa7cc9587d8d}{\index{movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}!posicao\+\_\+valida@{posicao\+\_\+valida}}
+\index{posicao\+\_\+valida@{posicao\+\_\+valida}!movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}}
+\subsubsection[{posicao\+\_\+valida}]{\setlength{\rightskip}{0pt plus 5cm}int posicao\+\_\+valida (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{movimentos__inimigo_8c_aecfeebf2d85baa822120aa7cc9587d8d}
+Função que delimita o tabuleiro \hypertarget{movimentos__inimigo_8c_a509bbeb98cfc1e427e5c0c60d209f379}{\index{movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}!posicao\+\_\+valida2@{posicao\+\_\+valida2}}
+\index{posicao\+\_\+valida2@{posicao\+\_\+valida2}!movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}}
+\subsubsection[{posicao\+\_\+valida2}]{\setlength{\rightskip}{0pt plus 5cm}int posicao\+\_\+valida2 (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{movimentos__inimigo_8c_a509bbeb98cfc1e427e5c0c60d209f379}
+Função que delimita o tabuleiro com exceção \hypertarget{movimentos__inimigo_8c_a70eee300f70cb602caaa867675c521e1}{\index{movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}!Rand\+Range@{Rand\+Range}}
+\index{Rand\+Range@{Rand\+Range}!movimentos\+\_\+inimigo.\+c@{movimentos\+\_\+inimigo.\+c}}
+\subsubsection[{Rand\+Range}]{\setlength{\rightskip}{0pt plus 5cm}int Rand\+Range (
+\begin{DoxyParamCaption}
+\item[{int}]{Min, }
+\item[{int}]{Max}
+\end{DoxyParamCaption}
+)}}\label{movimentos__inimigo_8c_a70eee300f70cb602caaa867675c521e1}
+Cria um numero aleatório entre dois limites 

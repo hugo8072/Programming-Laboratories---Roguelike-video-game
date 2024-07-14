@@ -1,0 +1,36 @@
+\hypertarget{score_8c}{\section{score.\+c File Reference}
+\label{score_8c}\index{score.\+c@{score.\+c}}
+}
+This graph shows which files directly or indirectly include this file\+:
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{score_8c_ac04dd0afaf7ea3eb2ade2544d2d5f907}{\#define {\bfseries R\+A\+N\+G\+E}~10240}\label{score_8c_ac04dd0afaf7ea3eb2ade2544d2d5f907}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{score_8c_a117d971627435caca8161a29ccc2ba68}{melhor\+\_\+score} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+D\+O} e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{score_8c_a117d971627435caca8161a29ccc2ba68}{\index{score.\+c@{score.\+c}!melhor\+\_\+score@{melhor\+\_\+score}}
+\index{melhor\+\_\+score@{melhor\+\_\+score}!score.\+c@{score.\+c}}
+\subsubsection[{melhor\+\_\+score}]{\setlength{\rightskip}{0pt plus 5cm}void melhor\+\_\+score (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+D\+O}}]{e}
+\end{DoxyParamCaption}
+)}}\label{score_8c_a117d971627435caca8161a29ccc2ba68}
+escreve e atualiza o ficheiro que grava o score
+
+lê o ficheiro
+
+guarda o ficheiro nesta localização
+
+lê o ficheiro score e coloca o nome e o score respetivo na string linha
+
+caso o score que estava no ficheiro seja maior do que o que está guardado na estrutura E\+S\+T\+A\+D\+O ele não grava no ficheiro. Contrariamente, se o score da estrutura for maior do que o do ficheiro ele irá subescrevre o mesmo guardando sempre o maior score
+
+substitui o ficheiro highscore pelo ficheiro saida para assim ficar apenas guardado o ficheiro atualizado 
